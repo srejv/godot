@@ -1,4 +1,4 @@
-/* summator.cpp */
+/* midi_in.cpp */
 
 #include "midi_in.h"
 

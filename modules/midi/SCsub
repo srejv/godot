@@ -24,7 +24,6 @@ env_midi.Append(LIBS=["winmm"])
 
 #sources = [
 #  "register_types.cpp",
-  #"summator.cpp",
   #"midi_in.cpp",
   #"midi_out.cpp"
 #]
