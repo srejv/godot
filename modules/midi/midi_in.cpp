@@ -81,7 +81,7 @@ void MidiIn::_bind_methods() {
   ClassDB::bind_method(D_METHOD("get_port_name", "index"), &MidiIn::get_port_name);
 
   ClassDB::bind_method(D_METHOD("open_port", "index"), &MidiIn::open_port);
-  ClassDB::bind_method(D_METHOD("is_port_open", ""), &MidiIn::is_port_open);
+  ClassDB::bind_method(D_METHOD("is_port_open"), &MidiIn::is_port_open);
   ClassDB::bind_method(D_METHOD("close_port"), &MidiIn::close_port);
 
   ClassDB::bind_method(D_METHOD("get_message"), &MidiIn::get_message);
