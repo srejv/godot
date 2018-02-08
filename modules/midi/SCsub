@@ -16,17 +16,17 @@ env_midi.Append(CPPPATH=[thirdparty_dir])
 
 # Godot's own source files
 env_midi.add_source_files(env.modules_sources, "*.cpp")
-if ARGUMENTS.get('platform', 'no') == 'windows':
+if (env["platform"] == "windows"):
   env_midi.Append(CPPDEFINES = ['__WINDOWS_MM__'])
   env_midi.Append(LIBS=["winmm"])
-if ARGUMENTS.get('platform', 'no') == 'linux':
+elif (env["platform"] == "linux"):
   env_midi.Append(CPPDEFINES = ['__LINUX_ALSA__'])
   env_midi.Append(LIBS=["asound", "pthread"])
-if ARGUMENTS.get('platform', 'no') == 'unix':
+elif (env["platform"] == "unix"):
   env_midi.Append(CPPDEFINES = ['__UNIX_JACK__'])
   env_midi.Append(LIBS=["jack"])
   pass
-if ARGUMENTS.get('platform', 'no') == 'mac':
+elif (env["platform"] == "osx"):
   env_midi.Append(CPPDEFINES = ['__MAC_OSX_CORE__'])
   # FRAMEWORK? How does this work?
   env_midi.Append(FRAMEWORKS=["CoreMIDI", "CoreAudio", "CoreFoundation"])

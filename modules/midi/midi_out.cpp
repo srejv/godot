@@ -5,7 +5,7 @@
 
 bool MidiOut::init() {
   try {
-    midi_out = new RtMidiOut();
+    midi_out = new RtMidiOut(RtMidi::Api::WINDOWS_MM);
   } catch (RtMidiError &error) {
     error.printMessage();
   }
